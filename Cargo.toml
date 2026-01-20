@@ -1,13 +1,21 @@
+[package]
+name = "comprehensive-rust"
+version = "0.1.0"
+edition = "2024"
+authors = ["ACFHarbinger"]
+
 [workspace]
 # List the paths to the packages included in this workspace
 members = [
     "exercise_collatz_sequence",
 ]
 
-# You can define shared settings here (Rust 2024 edition)
+# Shared workspace settings
 resolver = "2"
 
-[workspace.package]
-version = "0.1.0"
-edition = "2024"
-authors = ["ACFHarbinger"]
+[[bin]]
+name = "comprehensive-rust"
+path = "src/main.rs"
+
+[dependencies]
+exercise_collatz_sequence = { path = "./exercise_collatz_sequence" }

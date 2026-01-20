@@ -3,5 +3,12 @@
 version = 4
 
 [[package]]
+name = "comprehensive-rust"
+version = "0.1.0"
+dependencies = [
+ "exercise_collatz_sequence",
+]
+
+[[package]]
 name = "exercise_collatz_sequence"
 version = "0.1.0"
