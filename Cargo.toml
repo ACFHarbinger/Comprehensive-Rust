@@ -7,7 +7,7 @@ authors = ["ACFHarbinger"]
 [workspace]
 # List the paths to the packages included in this workspace
 members = [
-    "exercise_collatz_sequence",
+    "exercise_collatz_sequence", "exercise_nested_arrays",
 ]
 
 # Shared workspace settings
@@ -19,3 +19,4 @@ path = "src/main.rs"
 
 [dependencies]
 exercise_collatz_sequence = { path = "./exercise_collatz_sequence" }
+exercise_nested_arrays = { path = "./exercise_nested_arrays" }

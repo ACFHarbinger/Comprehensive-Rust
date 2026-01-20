@@ -3,6 +3,9 @@ use exercise_collatz_sequence::functions::blocks::*;
 use exercise_collatz_sequence::functions::loops::*;
 use exercise_collatz_sequence::functions::sequences::*;
 use exercise_collatz_sequence::functions::types::*;
+use exercise_nested_arrays::commands::arrays::*;
+use exercise_nested_arrays::commands::patterns::*;
+use exercise_nested_arrays::commands::tuples::*;
 use std::env;
 use std::string;
 
@@ -129,6 +132,46 @@ fn main() {
             "nested" | "nested_loop" | "nested_for" | "nested_for_loop" | "nfl",
         ) => {
             nested_for_loop();
+            "Success"
+        }
+        ("exercise_nested_arrays" | "ena", "arrays" | "a" | "arr", "mutable_arrays" | "ma") => {
+            mutable_arrays();
+            "Success"
+        }
+        ("exercise_nested_arrays" | "ena", "arrays" | "a" | "arr", "immutable_arrays" | "ia") => {
+            immutable_arrays();
+            "Success"
+        }
+        ("exercise_nested_arrays" | "ena", "arrays" | "a" | "arr", "array_iteration" | "ai") => {
+            array_iteration();
+            "Success"
+        }
+        ("exercise_nested_arrays" | "ena", "tuples" | "t" | "tup", "mutable_tuples" | "mt") => {
+            mutable_tuples();
+            "Success"
+        }
+        ("exercise_nested_arrays" | "ena", "tuples" | "t" | "tup", "immutable_tuples" | "it") => {
+            immutable_tuples();
+            "Success"
+        }
+        (
+            "exercise_nested_arrays" | "ena",
+            "patterns" | "p" | "pat",
+            "pattern_destructuring" | "pd",
+        ) => {
+            pattern_destructuring();
+            "Success"
+        }
+        (
+            "exercise_nested_arrays" | "ena",
+            "patterns" | "p" | "pat",
+            "refutable_pattern" | "rp",
+        ) => {
+            println!("{}", refutable_pattern());
+            "Success"
+        }
+        ("exercise_nested_arrays" | "ena", "arrays" | "a" | "arr", "nested_arrays" | "na") => {
+            nested_arrays();
             "Success"
         }
         (c, file, func) => {

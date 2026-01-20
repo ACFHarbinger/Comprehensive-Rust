@@ -7,8 +7,13 @@ name = "comprehensive-rust"
 version = "0.1.0"
 dependencies = [
  "exercise_collatz_sequence",
+ "exercise_nested_arrays",
 ]
 
 [[package]]
 name = "exercise_collatz_sequence"
+version = "0.1.0"
+
+[[package]]
+name = "exercise_nested_arrays"
 version = "0.1.0"
