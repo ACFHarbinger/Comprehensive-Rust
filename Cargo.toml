@@ -6,9 +6,7 @@ authors = ["ACFHarbinger"]
 
 [workspace]
 # List the paths to the packages included in this workspace
-members = [
-    "exercise_collatz_sequence", "exercise_nested_arrays",
-]
+members = ["day_one_morning", "day_one_afternoon"]
 
 # Shared workspace settings
 resolver = "2"
@@ -18,5 +16,5 @@ name = "comprehensive-rust"
 path = "src/main.rs"
 
 [dependencies]
-exercise_collatz_sequence = { path = "./exercise_collatz_sequence" }
-exercise_nested_arrays = { path = "./exercise_nested_arrays" }
+day_one_morning = { path = "./day_one_morning" }
+day_one_afternoon = { path = "./day_one_afternoon" }

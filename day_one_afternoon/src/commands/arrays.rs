@@ -25,7 +25,6 @@ pub fn array_iteration() {
 
 fn transpose(matrix: [[i32; 3]; 3]) -> [[i32; 3]; 3] {
     let mut transposed = [[0; 3]; 3];
-    print!("Transposing matrix:\n");
     for i in 0..matrix.len() {
         for j in 0..matrix[i].len() {
             transposed[j][i] = matrix[i][j];

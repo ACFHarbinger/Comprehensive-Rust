@@ -1,11 +1,11 @@
-use exercise_collatz_sequence::functions::arithmetic::*;
-use exercise_collatz_sequence::functions::blocks::*;
-use exercise_collatz_sequence::functions::loops::*;
-use exercise_collatz_sequence::functions::sequences::*;
-use exercise_collatz_sequence::functions::types::*;
-use exercise_nested_arrays::commands::arrays::*;
-use exercise_nested_arrays::commands::patterns::*;
-use exercise_nested_arrays::commands::tuples::*;
+use day_one_afternoon::commands::arrays::*;
+use day_one_afternoon::commands::patterns::*;
+use day_one_afternoon::commands::tuples::*;
+use day_one_morning::functions::arithmetic::*;
+use day_one_morning::functions::blocks::*;
+use day_one_morning::functions::loops::*;
+use day_one_morning::functions::sequences::*;
+use day_one_morning::functions::types::*;
 use std::env;
 use std::string;
 
@@ -34,26 +34,18 @@ fn main() {
     }
 
     let result = match (first_arg.as_str(), second_arg.as_str(), third_arg.as_str()) {
-        ("exercise_collatz_sequence" | "ecs", "arithmetic" | "a", "interproduct" | "ip") => {
+        ("day_one_morning" | "dom", "arithmetic" | "a", "interproduct" | "ip") => {
             println!(
                 "The interproduct of 120, 100, 248 is {}",
                 interproduct(120, 100, 248)
             );
             "Success"
         }
-        (
-            "exercise_collatz_sequence" | "ecs",
-            "arithmetic" | "a",
-            "gcd" | "greatest_common_divisor",
-        ) => {
+        ("day_one_morning" | "dom", "arithmetic" | "a", "gcd" | "greatest_common_divisor") => {
             println!("The GCD of 120 and 100 is {}", gcd(120, 100));
             "Success"
         }
-        (
-            "exercise_collatz_sequence" | "ecs",
-            "types" | "t",
-            "type_inf" | "type_inference" | "ti",
-        ) => {
+        ("day_one_morning" | "dom", "types" | "t", "type_inf" | "type_inference" | "ti") => {
             let x = 10;
             let y = 20;
             takes_u32(x);
@@ -61,116 +53,100 @@ fn main() {
             //takes_u32(y);
             "Success"
         }
-        ("exercise_collatz_sequence" | "ecs", "sequences" | "s", "fibonacci" | "fib") => {
+        ("day_one_morning" | "dom", "sequences" | "s", "fibonacci" | "fib") => {
             println!("The 10th Fibonacci number is {}", fib(10));
             "Success"
         }
         (
-            "exercise_collatz_sequence" | "ecs",
+            "day_one_morning" | "dom",
             "sequences" | "s",
             "fib_iter" | "fibonacci_iter" | "fib_iterative" | "fibonacci_iterative" | "fi",
         ) => {
             println!("The 10th Fibonacci number is {}", fib_iter(10));
             "Success"
         }
-        ("exercise_collatz_sequence" | "ecs", "sequences" | "s", "collatz" | "col") => {
+        ("day_one_morning" | "dom", "sequences" | "s", "collatz" | "col") => {
             println!("The 11th Collatz number is {}", collatz(11, 0));
             "Success"
         }
         (
-            "exercise_collatz_sequence" | "ecs",
+            "day_one_morning" | "dom",
             "sequences" | "s",
             "collatz_iter" | "collatz_iterative" | "ci",
         ) => {
             println!("The 11th Collatz number is {}", collatz_iter(11));
             "Success"
         }
-        (
-            "exercise_collatz_sequence" | "ecs",
-            "blocks" | "b",
-            "block" | "block_and_scope" | "bas",
-        ) => {
+        ("day_one_morning" | "dom", "blocks" | "b", "block" | "block_and_scope" | "bas") => {
             block_and_scope();
             "Success"
         }
-        ("exercise_collatz_sequence" | "ecs", "blocks" | "b", "if" | "if_expression" | "ie") => {
+        ("day_one_morning" | "dom", "blocks" | "b", "if" | "if_expression" | "ie") => {
             let x = 10;
             let size_str = if_expression(x);
             println!("{size_str}");
             "Success"
         }
-        (
-            "exercise_collatz_sequence" | "ecs",
-            "loops" | "l",
-            "match" | "match_expression" | "me",
-        ) => {
+        ("day_one_morning" | "dom", "loops" | "l", "match" | "match_expression" | "me") => {
             let x = 10;
             let num_str = match_expression(x);
             println!("The number {x} is {num_str}");
             "Success"
         }
-        ("exercise_collatz_sequence" | "ecs", "loops" | "l", "break" | "break_label" | "bl") => {
+        ("day_one_morning" | "dom", "loops" | "l", "break" | "break_label" | "bl") => {
             break_label();
             "Success"
         }
-        ("exercise_collatz_sequence" | "ecs", "loops" | "l", "while" | "while_loop" | "wl") => {
+        ("day_one_morning" | "dom", "loops" | "l", "while" | "while_loop" | "wl") => {
             let x = 200;
             while_loop(x);
             "Success"
         }
-        ("exercise_collatz_sequence" | "ecs", "loops" | "l", "for" | "for_loop" | "fl") => {
+        ("day_one_morning" | "dom", "loops" | "l", "for" | "for_loop" | "fl") => {
             for_loop();
             "Success"
         }
-        ("exercise_collatz_sequence" | "ecs", "loops" | "l", "loop" | "loop_loop" | "ll") => {
+        ("day_one_morning" | "dom", "loops" | "l", "loop" | "loop_loop" | "ll") => {
             loop_loop();
             "Success"
         }
         (
-            "exercise_collatz_sequence" | "ecs",
+            "day_one_morning" | "dom",
             "loops" | "l",
             "nested" | "nested_loop" | "nested_for" | "nested_for_loop" | "nfl",
         ) => {
             nested_for_loop();
             "Success"
         }
-        ("exercise_nested_arrays" | "ena", "arrays" | "a" | "arr", "mutable_arrays" | "ma") => {
+        ("day_one_afternoon" | "doa", "arrays" | "a" | "arr", "mutable_arrays" | "ma") => {
             mutable_arrays();
             "Success"
         }
-        ("exercise_nested_arrays" | "ena", "arrays" | "a" | "arr", "immutable_arrays" | "ia") => {
+        ("day_one_afternoon" | "doa", "arrays" | "a" | "arr", "immutable_arrays" | "ia") => {
             immutable_arrays();
             "Success"
         }
-        ("exercise_nested_arrays" | "ena", "arrays" | "a" | "arr", "array_iteration" | "ai") => {
+        ("day_one_afternoon" | "doa", "arrays" | "a" | "arr", "array_iteration" | "ai") => {
             array_iteration();
             "Success"
         }
-        ("exercise_nested_arrays" | "ena", "tuples" | "t" | "tup", "mutable_tuples" | "mt") => {
+        ("day_one_afternoon" | "doa", "tuples" | "t" | "tup", "mutable_tuples" | "mt") => {
             mutable_tuples();
             "Success"
         }
-        ("exercise_nested_arrays" | "ena", "tuples" | "t" | "tup", "immutable_tuples" | "it") => {
+        ("day_one_afternoon" | "doa", "tuples" | "t" | "tup", "immutable_tuples" | "it") => {
             immutable_tuples();
             "Success"
         }
-        (
-            "exercise_nested_arrays" | "ena",
-            "patterns" | "p" | "pat",
-            "pattern_destructuring" | "pd",
-        ) => {
+        ("day_one_afternoon" | "doa", "patterns" | "p" | "pat", "pattern_destructuring" | "pd") => {
             pattern_destructuring();
             "Success"
         }
-        (
-            "exercise_nested_arrays" | "ena",
-            "patterns" | "p" | "pat",
-            "refutable_pattern" | "rp",
-        ) => {
+        ("day_one_afternoon" | "doa", "patterns" | "p" | "pat", "refutable_pattern" | "rp") => {
             println!("{}", refutable_pattern());
             "Success"
         }
-        ("exercise_nested_arrays" | "ena", "arrays" | "a" | "arr", "nested_arrays" | "na") => {
+        ("day_one_afternoon" | "doa", "arrays" | "a" | "arr", "nested_arrays" | "na") => {
             nested_arrays();
             "Success"
         }

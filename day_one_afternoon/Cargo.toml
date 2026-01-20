@@ -1,5 +1,5 @@
 [package]
-name = "exercise_collatz_sequence"
+name = "day_one_afternoon"
 version = "0.1.0"
 edition = "2024"
 

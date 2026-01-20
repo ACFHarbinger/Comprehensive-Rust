@@ -6,14 +6,14 @@ version = 4
 name = "comprehensive-rust"
 version = "0.1.0"
 dependencies = [
- "exercise_collatz_sequence",
- "exercise_nested_arrays",
+ "day_one_afternoon",
+ "day_one_morning",
 ]
 
 [[package]]
-name = "exercise_collatz_sequence"
+name = "day_one_afternoon"
 version = "0.1.0"
 
 [[package]]
-name = "exercise_nested_arrays"
+name = "day_one_morning"
 version = "0.1.0"
